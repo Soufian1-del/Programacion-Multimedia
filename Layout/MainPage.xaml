@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Layout.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Label
+                Text="Layout!"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Button
+                x:Name="Vertical"
+                Text="Vertical" 
+                SemanticProperties.Hint="Counts the number of times you Vertical"
+                Clicked="Vertical_Clicked"
+                HorizontalOptions="Fill" />
+
+            <Button
+                x:Name="Horizontal"
+                Text="Horizontal" 
+                SemanticProperties.Hint="Counts the number of times you horizontal"
+                Clicked="Horizontal_Clicked"
+                HorizontalOptions="Fill" />
+
+            <Button
+                x:Name="grid"
+                Text="grid" 
+                SemanticProperties.Hint="Counts the number of times you grid"
+                Clicked="grid_Clicked"
+                HorizontalOptions="Fill" />
+
+                <Button
+                x:Name="absolute"
+                Text="absolute" 
+                SemanticProperties.Hint="Counts the number of times you absolute"
+                Clicked="absolute_Clicked"
+                HorizontalOptions="Fill" />
+
+
+                <Button
+                x:Name="flex"
+                Text="flex" 
+                SemanticProperties.Hint="Counts the number of times you flex"
+                Clicked="flex_Clicked"
+                HorizontalOptions="Fill" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

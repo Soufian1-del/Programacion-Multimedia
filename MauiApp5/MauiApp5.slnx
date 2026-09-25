@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="../Layout/Layout.csproj">
+    <Deploy Solution="Debug|*" />
+  </Project>
+  <Project Path="MauiApp5.csproj">
+    <Deploy Solution="Debug|*" />
+  </Project>
+</Solution>
