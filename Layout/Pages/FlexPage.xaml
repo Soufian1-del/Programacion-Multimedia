@@ -3,10 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Layout.Pages.FlexPage"
              Title="FlexPage">
-    <FlexLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    <FlexLayout Direction="Column">
+        <Button Text="1"/>
+        <Button Text="1"/>
+        <Button Text="1"/>
+        <Button Text="1"/>
+        <Button Text="1"/>
+        <Button Text="1"/>
+        <Button Text="1"/>
+        <Button Text="1"/>
+        <Button Text="1"/>
+        <Button Text="1"/>
+        <Button Text="1"/>
+        <Button Text="1"/>
+        <Button Text="1"/>
+        <Button Text="1"/>
     </FlexLayout>
 </ContentPage>

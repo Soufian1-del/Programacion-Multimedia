@@ -4,9 +4,8 @@
              x:Class="Layout.Pages.AbsolutePage"
              Title="AbsolutePage">
     <AbsoluteLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-     </AbsoluteLayout>
+        <Button Text="1" AbsoluteLayout.LayoutBounds="30,70,70,50"/>
+        <Button Text="2" AbsoluteLayout.LayoutBounds="1,1,1,1"/>
+        <Button Text="3" AbsoluteLayout.LayoutBounds="2,2,2,2"/>
+    </AbsoluteLayout>
 </ContentPage>
