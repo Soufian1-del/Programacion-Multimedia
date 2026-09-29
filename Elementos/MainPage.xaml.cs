@@ -9,16 +9,39 @@
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object? sender, EventArgs e)
+       
+
+        private void Button_Clicked(object sender, EventArgs e)
         {
-            count++;
+            String correoEntry = this.correoEntry.Text;
+            String comentarioEditor = this.comentarioEditor.Text;
+            String cursoPicker = this.cursoPicker.SelectedItem as String;
+            
+            if (CondicionesCheckbox.IsChecked)
+            {
+                DisplayAlertAsync("mensaje", "tu email es " + correoEntry, "aceptar");
+            } else
+            {
+                DisplayAlertAsync("mensaje", "resultado: "+ comentarioEditor, "aceptar");
+            }
+            DisplayAlertAsync("mensaje", "curso: " + cursoPicker, "aceptar");
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
+        }
+
+        private void OnNotificationesToggled(object sender, ToggledEventArgs e)
+        {
+
+        }
+
+        private void DateSelected(object sender, DateChangedEventArgs e)
+        {
+
+        }
+
+        private void volumeSlider_ValueChanged(object sender, ValueChangedEventArgs e)
+        {
+
         }
     }
 }

@@ -1,4 +1,7 @@
 <Solution>
+  <Project Path="../Elementos/Elementos.csproj" Id="ad0fb089-72c2-41d8-aa61-458cfd7513cf">
+    <Deploy Solution="Debug|*" />
+  </Project>
   <Project Path="../Layout/Layout.csproj">
     <Deploy Solution="Debug|*" />
   </Project>
