@@ -1,4 +1,6 @@
-﻿namespace Calculadora_IMC
+﻿using Microsoft.Maui.Graphics.Text;
+
+namespace Calculadora_IMC
 {
     public partial class MainPage : ContentPage
     {
@@ -9,16 +11,23 @@
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object? sender, EventArgs e)
+
+        private void CalculoDeIMC(object sender, EventArgs e)
         {
-            count++;
+            String peso = this.peso.Text;
+            String altura = this.altura.Text;
+            int PesoInt = Int32.Parse(peso);
+            int AlturaInt = Int32.Parse(altura);
+            if (AlturaInt == 0 || PesoInt == 0)
+            {
+                DisplayAlertAsync("debe de ser numeros mayores a 0");
+            } else
+            {
+                int imc = PesoInt/(AlturaInt * AlturaInt);
+                String imcText = imc.ToString;
+                DisplayAlertAsync("mensaje", "mensaje", imc, "mensaje");
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            }
         }
     }
 }
