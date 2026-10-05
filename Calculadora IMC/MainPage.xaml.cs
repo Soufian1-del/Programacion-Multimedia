@@ -20,12 +20,12 @@ namespace Calculadora_IMC
             int AlturaInt = Int32.Parse(altura);
             if (AlturaInt == 0 || PesoInt == 0)
             {
-                DisplayAlertAsync("debe de ser numeros mayores a 0");
+                await DisplayAlertAsync("error", "debe de ser numeros mayores a 0", "ok");
             } else
             {
                 int imc = PesoInt/(AlturaInt * AlturaInt);
-                String imcText = imc.ToString;
-                DisplayAlertAsync("mensaje", "mensaje", imc, "mensaje");
+                String imcText = imc.ToString();
+                await DisplayAlertAsync("mensaje", imcText, "mensaje");
 
             }
         }
