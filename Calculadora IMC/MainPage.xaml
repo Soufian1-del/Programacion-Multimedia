@@ -42,8 +42,15 @@
                 Clicked="CalculoDeIMC"
                 />
                 <Label
-                Text="tu IMC es: "
+                    x:Name="LabelResultado"
+                    Text=""
+                    TextColor="Black"
+                    HorizontalOptions="Center"
                 />
+                <Image
+                    x:Name="ImageResultado"
+                    Aspect="AspectFit"
+                    />      
         </VerticalStackLayout>
     </ScrollView>
 

@@ -4,7 +4,6 @@ namespace Calculadora_IMC
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
 
         public MainPage()
         {
@@ -16,18 +15,43 @@ namespace Calculadora_IMC
         {
             String peso = this.peso.Text;
             String altura = this.altura.Text;
-            int PesoInt = Int32.Parse(peso);
-            int AlturaInt = Int32.Parse(altura);
-            if (AlturaInt == 0 || PesoInt == 0)
+            try
             {
-                await DisplayAlertAsync("error", "debe de ser numeros mayores a 0", "ok");
-            } else
-            {
-                int imc = PesoInt/(AlturaInt * AlturaInt);
-                String imcText = imc.ToString();
-                await DisplayAlertAsync("mensaje", imcText, "mensaje");
+                        double PesoInt = double.Parse(peso);
+                        double AlturaInt = double.Parse(altura);
+                        if (AlturaInt == 0 || PesoInt == 0)
+                        {
+                             DisplayAlertAsync("error", "debe de ser numeros mayores a 0", "ok");
+                        } else
+                        {                            
+                            double imc = Math.Round(PesoInt / (AlturaInt * AlturaInt), 2);
 
+                    switch (imc)
+                    {
+                        case < 18.5:
+                            this.LabelResultado.Text = "Tu imc es: " + imc;
+                            this.ImageResultado.Source = "delgado.png";
+                                break;
+                        case >18.5 and <24.9:
+                            this.LabelResultado.Text = "Tu imc es: " + imc;
+                            this.ImageResultado.Source = "normal.png";
+                            break;
+                                case >25 and <29.9 :
+                            this.LabelResultado.Text = "Tu imc es: " + imc;
+                            this.ImageResultado.Source = "sobrepeso.png";
+                            break;
+                                case > 30:
+                            this.LabelResultado.Text = "Tu imc es: " + imc;
+                            this.ImageResultado.Source = "obeso.png";
+                            break;
+                    }
+                        }
             }
+            catch (FormatException)
+            {
+                DisplayAlertAsync("bla", "bla", "bla", "bla");
+            }
+            
         }
     }
 }
