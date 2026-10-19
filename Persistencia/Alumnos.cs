@@ -1,0 +1,13 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Persistencia
+{
+    internal class Alumnos
+    {
+        public string nombre{ get; set; }
+        public string apellido { get; set; }
+        public int edad { get; set; }
+    }
+}

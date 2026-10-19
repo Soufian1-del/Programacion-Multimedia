@@ -8,6 +8,12 @@
   <Project Path="../Layout/Layout.csproj">
     <Deploy Solution="Debug|*" />
   </Project>
+  <Project Path="../Login/Login.csproj" Id="048ca6a2-7841-4ee1-96ba-4d719f846f01">
+    <Deploy Solution="Debug|*" />
+  </Project>
+  <Project Path="../Persistencia/Persistencia.csproj">
+    <Deploy Solution="Debug|*" />
+  </Project>
   <Project Path="MauiApp5.csproj">
     <Deploy Solution="Debug|*" />
   </Project>
