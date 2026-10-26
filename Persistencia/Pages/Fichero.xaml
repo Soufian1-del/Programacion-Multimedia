@@ -4,9 +4,6 @@
              x:Class="Persistencia.Pages.Fichero"
              Title="Fichero">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <Editor x:Name="resultado" />
     </VerticalStackLayout>
 </ContentPage>

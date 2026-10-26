@@ -2,6 +2,9 @@
   <Project Path="../Calculadora IMC/Calculadora IMC.csproj" Id="5329c76b-4521-4883-85f5-aaa6f8c42cd5">
     <Deploy Solution="Debug|*" />
   </Project>
+  <Project Path="../Collection/Collection.csproj" Id="37ba2212-770b-4de4-8571-65cf7078a79b">
+    <Deploy Solution="Debug|*" />
+  </Project>
   <Project Path="../Elementos/Elementos.csproj" Id="ad0fb089-72c2-41d8-aa61-458cfd7513cf">
     <Deploy Solution="Debug|*" />
   </Project>
