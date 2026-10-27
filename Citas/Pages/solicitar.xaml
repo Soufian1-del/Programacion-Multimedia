@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Citas.Pages.solicitar"
+             Title="solicitar">
+    <VerticalStackLayout Padding="10" Margin="10">
+
+        <Entry
+ x:Name="Nombre"
+ Placeholder="Nombre"
+ Keyboard="Text"
+ MaxLength="80" />
+        <Entry
+ x:Name="Apellidos"
+ Placeholder="Apellidos"
+ Keyboard="Text"
+ MaxLength="80" />
+        <Entry
+ x:Name="Numero"
+ Placeholder="Numero de paciente"
+ Keyboard="Numeric"
+ MaxLength="80" />
+        <Picker
+x:Name="Turno"
+Title="Preferencia de turno">
+            <Picker.Items>
+                <x:String>Mañana</x:String>
+                <x:String>Tarde</x:String>
+            </Picker.Items>
+        </Picker>
+        <HorizontalStackLayout Spacing="8">
+            <CheckBox 
+         x:Name="Recuerdame" 
+      />
+            <Label Text="Recuerda mis datos" />
+        </HorizontalStackLayout>
+a
+        <Label
+            Text="Selecciona una especialidad"
+            FontAttributes="Bold"
+            />
+
+        <CollectionView x:Name="listaEspecialidades" SelectionMode="Single" SelectionChanged="listaEspecialidades_SelectionChanged">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width=".2*"/>
+                            <ColumnDefinition Width=".6*"/>
+                            <ColumnDefinition Width=".2*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" Source="cardiologia.png" />
+                        <Label Grid.Column="1" Text="ejemplo" FontAttributes="Bold" />
+                        <Label Grid.Column="2" Text="ejemplo1" FontAttributes="Bold" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>
