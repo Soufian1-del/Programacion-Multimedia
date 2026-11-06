@@ -12,6 +12,10 @@ namespace Citas
         public string Turno { get;  set; }
         public DateTime fecha { get; set; }
         public Especialidades Especialidad { get;  set; }
+
+        public string doctor { get; set; }
+        public int dias { get; set; }
+        public String numPaciente { get; set; }
         
     }
 }

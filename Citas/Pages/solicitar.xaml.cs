@@ -60,7 +60,8 @@ public partial class solicitar : ContentPage
             Preferences.Remove("Apellidos");
             Preferences.Remove("Numero");
         }
-        Citas cita = new Citas {nombre=this.Nombre.Text, Apellido=this.Apellidos.Text, Turno=this.Turno.SelectedItem.ToString(), Especialidad=(Especialidades)this.listaEspecialidades.SelectedItem, fecha= DateTime.Now};
+        Especialidades especialidad = (Especialidades)this.listaEspecialidades.SelectedItem;
+        Citas cita = new Citas {nombre=this.Nombre.Text, Apellido=this.Apellidos.Text, Turno=this.Turno.SelectedItem.ToString(), Especialidad=especialidad, fecha= DateTime.Now, dias= especialidad.Dias, doctor= especialidad.Nombre, numPaciente=this.Numero.Text};
         path = FileSystem.AppDataDirectory;
         fichero = Path.Combine(path, "citas.json");
         string json = JsonSerializer.Serialize(cita);
