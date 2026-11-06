@@ -1,4 +1,4 @@
-﻿using Android.Text;
+﻿
 
 namespace Collection
 {

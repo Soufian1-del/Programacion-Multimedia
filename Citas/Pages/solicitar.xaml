@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Citas.Pages.solicitar"
              Title="solicitar">
-    <VerticalStackLayout Padding="10" Margin="10">
+    <ScrollView>
+        <VerticalStackLayout Padding="10" Margin="10">
 
         <Entry
  x:Name="Nombre"
@@ -34,27 +35,34 @@ Title="Preferencia de turno">
       />
             <Label Text="Recuerda mis datos" />
         </HorizontalStackLayout>
-a
+
         <Label
             Text="Selecciona una especialidad"
             FontAttributes="Bold"
             />
-
-        <CollectionView x:Name="listaEspecialidades" SelectionMode="Single" SelectionChanged="listaEspecialidades_SelectionChanged">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width=".2*"/>
-                            <ColumnDefinition Width=".6*"/>
-                            <ColumnDefinition Width=".2*"/>
-                        </Grid.ColumnDefinitions>
-                        <Image Grid.Column="0" Source="cardiologia.png" />
-                        <Label Grid.Column="1" Text="ejemplo" FontAttributes="Bold" />
-                        <Label Grid.Column="2" Text="ejemplo1" FontAttributes="Bold" />
-                    </Grid>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-    </VerticalStackLayout>
+        
+            <CollectionView x:Name="listaEspecialidades" SelectionMode="Single" SelectionChanged="listaEspecialidades_SelectionChanged">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width=".2*"/>
+                                <ColumnDefinition Width=".6*"/>
+                                <ColumnDefinition Width=".2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" Source="{Binding Imagen}"/>
+                            <VerticalStackLayout Grid.Column="1">
+                                <Label  Text="{Binding Especialidad}" FontAttributes="Bold" />
+                                <Label  Text="{Binding Nombre}" FontAttributes="Bold" />
+                            </VerticalStackLayout>
+                            <Label Grid.Column="2" Text="{Binding Dias}" FontAttributes="Bold" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Button 
+                Text="Solicitar cita"
+                Clicked="SolicitandoCita"/>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
