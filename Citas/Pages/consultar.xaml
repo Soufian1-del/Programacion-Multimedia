@@ -15,7 +15,7 @@
                         <VerticalStackLayout Grid.Column="0">
                             <Label Text="{Binding Especialidad}" FontAttributes="Bold" FontSize="Large"></Label>
                             <Label Text="{Binding doctor}" FontAttributes="Bold" FontSize="Large"></Label>
-                            <Label Text="{Binding FechaSolicitud,StringFormat='Solicitada el {0:dd/MM/yyyy/HH:mm}'}" />
+                            <Label Text="{Binding fecha,StringFormat='Solicitada el {0:dd/MM/yyyy/HH:mm}'}" />
                         </VerticalStackLayout>
                         <VerticalStackLayout Grid.Column="1">
                         <Label Text="{Binding dias}" />

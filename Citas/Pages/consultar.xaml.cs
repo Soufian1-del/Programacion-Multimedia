@@ -14,12 +14,13 @@ public partial class consultar : ContentPage
     }
 
 
-
     private List<Citas> CargarCitas()
-	{
+    {
+        if (!File.Exists(rutaCitas))
+            return new List<Citas>();
         string json = File.ReadAllText(rutaCitas);
-        List<Citas> citas = JsonSerializer.Deserialize<List<Citas>>(json);
-
-		return citas;
-	}
+        if (string.IsNullOrWhiteSpace(json))
+            return new List<Citas>();
+        return JsonSerializer.Deserialize<List<Citas>>(json) ?? new List<Citas>();
+    }
 }
